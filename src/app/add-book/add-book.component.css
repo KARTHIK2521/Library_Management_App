@@ -1,0 +1,12 @@
+
+ .navbar-brand-1{
+   color: aliceblue;
+   font-size: 2.5em;
+   font-family: calibri;
+ }
+input.ng-invalid.ng-touched{
+  border: red px solid;
+}
+small{
+color: red;
+}

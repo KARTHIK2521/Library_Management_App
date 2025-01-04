@@ -1,0 +1,111 @@
+<div>
+  <nav class="navbar navbar-light button-color justify-content-center">
+    <span class="navbar-brand-1 mb-0">Add Book</span>
+  </nav>
+
+
+    <div class="col-sm-6">
+      <form class="form" [formGroup]="addBookForm" (ngSubmit)="onFormSubmit()">
+        <div class="form-group row m-3">
+          <label for="isbnNumber" class="col-sm-3 form-label-red">ISBN Number</label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control" id="isbnNumber" formControlName="isbnNumber">
+            <div class="text-danger" *ngIf="addBookForm.controls['isbnNumber'].invalid &&
+            (addBookForm.controls['isbnNumber'].touched || addBookForm.controls['isbnNumber'].dirty)">
+              <span *ngIf="addBookForm.controls['isbnNumber'].errors?.['required']">*This is required min 5 Numbers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row m-3">
+          <label for="name" class="col-sm-3 form-label-red">Name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="name" formControlName="name">
+            <div class="text-danger" *ngIf="addBookForm.controls['name'].invalid &&
+            (addBookForm.controls['name'].touched || addBookForm.controls['name'].dirty)">
+              <span *ngIf="addBookForm.controls['name'].errors?.['required']">*This field required min 5 characters</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row m-3">
+          <label for="author" class="col-sm-3 form-label-black">Author</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="author" formControlName="author">
+            <div class="text-danger" *ngIf="addBookForm.controls['author'].invalid &&
+            (addBookForm.controls['author'].touched || addBookForm.controls['author'].dirty)">
+              <span *ngIf="addBookForm.controls['author'].errors?.['required']">*This field is required</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row m-3">
+          <label for="publication" class="col-sm-3 form-label-red">Publication</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="publication" formControlName="publication">
+            <div class="text-danger" *ngIf="addBookForm.controls['publication'].invalid &&
+            (addBookForm.controls['publication'].touched || addBookForm.controls['publication'].dirty)">
+              <span *ngIf="addBookForm.controls['publication'].errors?.['required']">*This field required min 5 characters</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row m-3">
+          <label for="details" class="col-sm-3 form-label-red">Details</label>
+          <div class="col-sm-9">
+            <textarea type="text" class="form-control" id="details" formControlName="details"></textarea>
+            <div class="text-danger" *ngIf="addBookForm.controls['details'].invalid &&
+            (addBookForm.controls['details'].touched || addBookForm.controls['details'].dirty)">
+              <span *ngIf="addBookForm.controls['details'].errors?.['required']">*This field is required</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row m-3">
+          <label for="qty" class="col-sm-3 form-label-red">Qty</label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control" id="qty" min="1" max="5" maxlenght="1"
+            formControlName="qty">
+            <div class="text-danger" *ngIf="addBookForm.controls['qty'].invalid &&
+            (addBookForm.controls['qty'].touched || addBookForm.controls['qty'].dirty)">
+              <span *ngIf="addBookForm.controls['qty'].errors?.['required']">*This field required Min 1 and Max 5 quantity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row m-3">
+          <label for="price" class="col-sm-3 form-label-black">Price</label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control" id="price" formControlName="price">
+            <div class="text-danger" *ngIf="addBookForm.controls['price'].invalid &&
+            (addBookForm.controls['price'].touched || addBookForm.controls['price'].dirty)">
+              <span *ngIf="addBookForm.controls['price'].errors?.['required']">*This is required Min 2 and Max 5 Numbers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row m-3">
+          <label for="branch"  class="col-sm-3 form-label-red">Branch</label>
+          <div class="col-sm-9">
+            <select class="form-select" id="branch" name="branch" class="col-sm-9" formControlName="branch">
+              <option *ngFor="let dept of department" [value]="dept">{{dept}}</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="form-group row m-3">
+            <div class="col-sm-3"></div>
+              <div class="col-sm-9">
+                <button type="submit" class="btn button-color btn-lg btn-block"
+                 [disabled]="!addBookForm.valid">Submit</button>
+              </div>
+        </div>
+
+
+      </form>
+    </div>
+
+
+  </div>
+

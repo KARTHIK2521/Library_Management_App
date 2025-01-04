@@ -1,0 +1,43 @@
+
+  <div id="grad1">
+    <h1 class="d-flex justify-content-center digital"> Digital Library</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="card mt-2 border-5">
+          <form  [formGroup]="loginForm" (ngSubmit)="proceedLogin()">
+            <div class="form-group row m-3 pt-4">
+              <label for="username" class="col-sm-3 form-label-red">Username</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="username" formControlName="username" />
+              </div>
+            </div>
+            <div class="form-group row m-3">
+              <label for="password" class="col-sm-3 form-label-red">Password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control"  formControlName="password" id="password" />
+              </div>
+            </div>
+            <div class="form-group row m-4">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-9">
+                <button type="submit" class="btn button-color btn-lg btn-block">Login</button>
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+  </div>
+
+
+
+  </div>
+
+

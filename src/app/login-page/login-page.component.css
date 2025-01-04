@@ -1,0 +1,12 @@
+#grad1 {
+  height: 700px;
+  background-image: linear-gradient(to bottom, rgba(0,146,212,0), rgba(0,146,212,0.6));
+}
+.digital{
+  padding-top: 3em;
+  font-size: 50px;
+  color: #2f5597;
+}
+
+
+

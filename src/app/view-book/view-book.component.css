@@ -1,0 +1,15 @@
+.bg-color {
+  background-color: #2f5597;
+  color: aliceblue;
+ }
+ .navbar-brand-1{
+   color: aliceblue;
+   font-size: 2.5em;
+   font-family: calibri;
+ }
+ .table-bordered {
+  border: 2px solid #78c771;
+}
+tbody tr:nth-child(odd){
+  background-color:#c3e6cb;
+}

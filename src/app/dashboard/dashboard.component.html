@@ -1,0 +1,32 @@
+<div class="dashboard">
+  <nav class="navbar navbar-light bg-color justify-content-center">
+    <span class="navbar-brand-1 mb-0">Dashboard</span>
+    <div class="d-flex flex-row-reverse">
+      <button class="btn logout navbar-brand-2" type="submit"><a routerLink="/login">Logout</a></button>
+    </div>
+  </nav>
+
+  <div class="row">
+
+    <div class="col-sm-2">
+      <div class="sidebar">
+        <a routerLink="/addbook"><i class="fa fa-fw fa-plus"></i> Add Book</a>
+        <a routerLink="/deletebook"><i class="fa fa-fw fa-close"></i> Delete Book</a>
+        <a routerLink="/viewbook"><i class="fa fa-fw fa-file-text-o"></i> View Books</a>
+        <a routerLink="/not-found"><i class="fa fa-fw fa-plus"></i> Add Student </a>
+        <a routerLink="/not-found"><i class="fa fa-fw fa-plus"></i> Issue Book</a>
+        <a routerLink="/not-found"><i class="fa fa-fw fa-mail-reply"></i> Return Book</a>
+        <a routerLink="/not-found"><i class="fa fa-fw fa-file"></i> Report</a>
+
+      </div>
+    </div>
+   <!-- Bar Chart and Pie Chart -->
+    <div class="col-sm-9">
+        <app-charts></app-charts>
+    </div>
+
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

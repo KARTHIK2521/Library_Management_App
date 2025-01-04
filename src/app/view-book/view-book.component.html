@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-color justify-content-center">
+  <span class="navbar-brand-1 mb-0">View Book</span>
+</nav>
+
+<div class="row m-3" >
+  <table class="table table-bordered p-2">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col" *ngFor="let item of tableColumnDate keyvalue">{{item}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let item of bookDetailsData; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.author}}</td>
+        <td>{{item.branch}}</td>
+        <td>{{item.details}}</td>
+        <td>{{item.isbnNumber}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.publication}}</td>
+        <td>{{item.qty}}</td>
+
+      </tr>
+  </table>
+</div>

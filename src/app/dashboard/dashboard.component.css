@@ -1,0 +1,55 @@
+.dashboard{
+  display: block;
+}
+.bg-color {
+ background-color: #2f5597;
+ color: aliceblue;
+}
+.navbar-brand-1{
+  color: aliceblue;
+  font-size: 2.5em;
+  font-family: calibri;
+}
+.navbar-brand-2{
+  color: aliceblue;
+  font-size: 1.0em;
+  font-family: calibri;
+}
+a{
+ text-decoration: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 16px;
+  padding-left: 18px;
+}
+
+.logout{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  margin-top: 20px;
+  margin-right: 28px;
+
+}
+.sidebar a {
+  padding: 6px 8px 6px 5px;
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  display: block;
+}
+.sidebar i {
+  color: #2f5597;
+}
+
